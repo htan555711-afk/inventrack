@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $conn->close();
 
         if ($user && password_verify($password, $user['password'])) {
+            echo "LOGIN OK - user found"; exit();
             $_SESSION['user_id']   = $user['id'];
             $_SESSION['username']  = $user['username'];
             $_SESSION['full_name'] = $user['full_name'];
