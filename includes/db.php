@@ -1,15 +1,12 @@
 <?php
-// ============================================
-// db.php - Database Connection
-// ============================================
-
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');       // Change to your MySQL username
-define('DB_PASS', '');           // Change to your MySQL password
-define('DB_NAME', 'inventory_db');
+define('DB_HOST', 'mysql.railway.internal');
+define('DB_USER', 'root');
+define('DB_PASS', 'zJxjQnnaXONmHIcZiDYmChsMynbtCsjN');
+define('DB_NAME', 'railway');
+define('DB_PORT', 3306);
 
 function getConnection() {
-    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+    $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
