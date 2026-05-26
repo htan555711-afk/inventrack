@@ -1,8 +1,4 @@
 <?php
-// ============================================
-// auth.php - Session & Authentication Helpers
-// ============================================
-
 function requireLogin() {
     if (session_status() === PHP_SESSION_NONE) {
         session_start();

@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['full_name'] = $user['full_name'];
             $_SESSION['user_role'] = $user['role'];
             session_regenerate_id(true);
-            header("Location: /dashboard.php");
+            header("Location: dashboard.php");
             exit();
         } else {
             $error = 'Invalid username or password.';
